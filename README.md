@@ -5,6 +5,14 @@ StudyBuddy is a modern, student-first web application designed to transform dens
 
 ---
 
+## 🎬 Video Demo
+
+[![StudyBuddy Demo Video](https://img.youtube.com/vi/a64-BD1NT2E/maxresdefault.jpg)](https://youtu.be/a64-BD1NT2E)
+
+👉 **Watch the full project walkthrough on YouTube:** [https://youtu.be/a64-BD1NT2E](https://youtu.be/a64-BD1NT2E)
+
+---
+
 ## 🚀 Features
 
 - **📝 Instant Summary:** 2–3 sentence high-level overview summarizing raw notes.
