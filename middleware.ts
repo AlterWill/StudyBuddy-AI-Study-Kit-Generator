@@ -1,10 +1,9 @@
-import { NextResponse } from "next/server"
-import type { NextRequest } from "next/routing"
+import { NextResponse, type NextRequest } from "next/server"
 
 const protectedRoutes = ["/dashboard", "/upload", "/admin"]
 const authRoutes = ["/auth/signin", "/auth/signup"]
 
-export function middleware(req: NextRequest) {
+export async function middleware(req: NextRequest) {
   const path = req.nextUrl.pathname
   const isAuthRoute = authRoutes.some((route) => path.startsWith(route))
   const isProtectedRoute = protectedRoutes.some((route) => path.startsWith(route))

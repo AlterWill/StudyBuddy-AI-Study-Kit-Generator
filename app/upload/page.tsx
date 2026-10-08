@@ -1,11 +1,14 @@
+'use client';
+
+import React, { useState } from "react";
 import Image from "next/image";
 
 export default function UploadPage() {
-  const [category, setCategory] = React.useState<string | null>(null)
-  const [title, setTitle] = React.useState<string>("")
-  const [description, setDescription] = React.useState<string>("")
-  const [proofUrl, setProofUrl] = React.useState<string>("")
-  const [status, setStatus] = React.useState<string>("pending")
+  const [category, setCategory] = useState<string | null>(null)
+  const [title, setTitle] = useState<string>("")
+  const [description, setDescription] = useState<string>("")
+  const [proofUrl, setProofUrl] = useState<string>("")
+  const [status, setStatus] = useState<string>("pending")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -83,7 +86,7 @@ export default function UploadPage() {
               onChange={(e) => setDescription(e.target.value)}
               rows={3}
               className="w-full px-3 py-2 border border-zinc-300 rounded-md focus:outline-none focus:ring-2 focus:ring-zinc-600 dark:bg-zinc-800 dark:text-zinc-100"
-            /></textarea>
+            />
           </div>
           <div>
             <label className="block text-sm font-medium text-zinc-700 mb-2">

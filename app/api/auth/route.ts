@@ -1,5 +1,5 @@
-import { Database } from "better-sqlite3";
-import { hashPassword, verifyPassword } from "@/lib/auth";
+import Database from "better-sqlite3";
+import { hashPassword, verifyPassword } from "@/app/lib/auth";
 
 const db = new Database("./dev.db");
 

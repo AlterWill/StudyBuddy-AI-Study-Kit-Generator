@@ -1,10 +1,13 @@
+'use client';
+
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function AdminPanel() {
-  const [submissions, setSubmissions] = React.useState<any[]>([])
-  const [loading, setLoading] = React.useState(true)
+  const [submissions, setSubmissions] = useState<any[]>([])
+  const [loading, setLoading] = useState(true)
 
-  React.useEffect(() => {
+  useEffect(() => {
     fetch("/api/admin/pending")
       .then((res) => res.json())
       .then((data) => {
