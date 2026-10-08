@@ -1,23 +1,85 @@
 # StudyBuddy — AI Study Kit Generator
-**ForgeHacks 2026 Online Hackathon | Track: AI + Education**
+> **ForgeHacks 2026 Online Hackathon | Track: AI + Education**
 
-StudyBuddy is a lightweight, clean web application designed to instantly transform dense lecture notes, articles, or textbook passages into an interactive study kit.
+StudyBuddy is a modern, student-first web application designed to transform dense lecture notes, textbook passages, or study material into structured, interactive study kits in seconds using Google Gemini AI.
 
-## 🚀 Key Features
-- **Instant Summary:** 2–3 sentence high-level overview of complex notes.
-- **Key Concepts:** Extracted core takeaways for rapid reviewing.
-- **Interactive Flashcards:** Digital flip cards with click-to-reveal answers.
-- **Self-Assessment Quiz:** Multiple-choice quiz with real-time green/red feedback and live score tracking.
-- **"Explain Simply":** One-click simplification for tricky topics.
+---
+
+## 🚀 Features
+
+- **📝 Instant Summary:** 2–3 sentence high-level overview summarizing raw notes.
+- **💡 Key Concepts:** Highlighted core takeaways for quick review before exams.
+- **🗂️ Interactive Flashcards:** Digital flip cards with question front and click-to-reveal answers.
+- **🧠 Self-Assessment Quiz:** Interactive multiple-choice questions with instant correct/incorrect visual feedback and score calculation.
+- **✨ Clean, Responsive UI:** High-contrast, mobile-friendly interface built with Tailwind CSS.
+
+---
 
 ## 🛠️ Tech Stack
-- **Framework:** Next.js (App Router, TypeScript)
-- **Styling:** Tailwind CSS
-- **AI Integration:** Google Gemini API (`gemini-2.5-flash`) via `@google/genai` SDK
+
+- **Framework:** [Next.js](https://nextjs.org/) (App Router, TypeScript)
+- **UI & Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **AI Model:** [Google Gemini API](https://ai.google.dev/) (`gemini-2.5-flash`) via the `@google/genai` SDK
+- **Database & ORM:** [Prisma](https://www.prisma.io/) with SQLite for activity and review tracking
+- **Package Manager:** `pnpm`
+
+---
+
+## 📂 Project Structure
+
+```
+├── app/
+│   ├── api/
+│   │   ├── generate-kit/     # Gemini AI study kit generation route
+│   │   ├── auth/             # Authentication endpoints
+│   │   └── admin/            # Admin review & approval routes
+│   ├── admin/                # Admin panel UI
+│   ├── dashboard/            # Student dashboard UI
+│   ├── upload/               # Activity submission page
+│   ├── layout.tsx            # Global layout shell with ForgeHacks header
+│   └── page.tsx              # Main StudyBuddy kit generator & interactive UI
+├── prisma/
+│   ├── schema.prisma         # Prisma database schema
+│   └── seed.ts               # Database seed script
+├── public/                   # Static icons & assets
+├── .gitignore                # Git ignore configuration
+└── README.md                 # Project documentation
+```
+
+---
 
 ## 🏃 Getting Started Locally
 
-1. **Clone the repository:**
-   ```bash
-   git clone <your-github-repo-url>
-   cd studybuddy
+### Prerequisites
+- Node.js 18+ installed
+- `pnpm` (or `npm` / `yarn` / `bun`)
+- A [Google AI Studio API Key](https://aistudio.google.com/)
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/AlterWill/StudyBuddy-AI-Study-Kit-Generator.git
+cd StudyBuddy-AI-Study-Kit-Generator
+```
+
+### 2. Install dependencies
+```bash
+pnpm install
+```
+
+### 3. Configure environment variables
+Create a `.env.local` file in the root directory:
+```env
+GEMINI_API_KEY="your_google_gemini_api_key_here"
+```
+
+### 4. Run the development server
+```bash
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+
+---
+
+## 📄 License
+This project was built for **ForgeHacks 2026**.
