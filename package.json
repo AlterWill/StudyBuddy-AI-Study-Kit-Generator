@@ -6,30 +6,21 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "postinstall": "prisma skills sync || exit 0"
+    "lint": "eslint"
   },
   "dependencies": {
     "@google/genai": "^2.27.0",
-    "bcrypt": "^6.0.0",
-    "better-sqlite3": "^13.0.3",
-    "dotenv": "^18.0.6",
     "next": "16.4.0",
-    "next-auth": "^4.24.15",
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },
   "devDependencies": {
-    "@prisma/client": "^7.10.0",
     "@tailwindcss/turbopack": "^4",
-    "@types/bcrypt": "^6.0.0",
-    "@types/better-sqlite3": "^9.6.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.0",
-    "prisma": "8.0.0-rc.21",
     "tailwindcss": "^4",
     "typescript": "^5"
   },

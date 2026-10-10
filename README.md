@@ -28,7 +28,6 @@ StudyBuddy is a modern, student-first web application designed to transform dens
 - **Framework:** [Next.js](https://nextjs.org/) (App Router, TypeScript)
 - **UI & Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **AI Model:** [Google Gemini API](https://ai.google.dev/) (`gemini-2.5-flash`) via the `@google/genai` SDK
-- **Database & ORM:** [Prisma](https://www.prisma.io/) with SQLite for activity and review tracking
 - **Package Manager:** `pnpm`
 
 ---
@@ -38,17 +37,10 @@ StudyBuddy is a modern, student-first web application designed to transform dens
 ```
 ├── app/
 │   ├── api/
-│   │   ├── generate-kit/     # Gemini AI study kit generation route
-│   │   ├── auth/             # Authentication endpoints
-│   │   └── admin/            # Admin review & approval routes
-│   ├── admin/                # Admin panel UI
-│   ├── dashboard/            # Student dashboard UI
-│   ├── upload/               # Activity submission page
+│   │   └── generate-kit/     # Gemini AI study kit generation endpoint
+│   ├── globals.css           # Tailwind CSS directives
 │   ├── layout.tsx            # Global layout shell with ForgeHacks header
 │   └── page.tsx              # Main StudyBuddy kit generator & interactive UI
-├── prisma/
-│   ├── schema.prisma         # Prisma database schema
-│   └── seed.ts               # Database seed script
 ├── public/                   # Static icons & assets
 ├── .gitignore                # Git ignore configuration
 └── README.md                 # Project documentation
