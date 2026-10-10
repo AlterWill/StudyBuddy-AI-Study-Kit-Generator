@@ -1,4 +1,4 @@
-import { GoogleGenAI } from '@google/genai';
+import { GoogleGenAI, ThinkingLevel } from '@google/genai';
 import { NextResponse } from 'next/server';
 
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
@@ -13,7 +13,7 @@ export async function POST(req: Request) {
 
     // Force structured JSON output for easy frontend rendering
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3.8-flash',
       contents: `You are StudyBuddy. Analyze these notes and generate a study kit in JSON format with these exact keys:
       - "summary": a 2-3 sentence summary
       - "keyConcepts": array of important points
@@ -24,6 +24,9 @@ export async function POST(req: Request) {
       ${text}`,
       config: {
         responseMimeType: 'application/json',
+        thinkingConfig: {
+          thinkingLevel: ThinkingLevel.LOW,
+        },
       },
     });
 

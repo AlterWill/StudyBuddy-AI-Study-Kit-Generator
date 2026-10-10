@@ -27,7 +27,7 @@ StudyBuddy is a modern, student-first web application designed to transform dens
 
 - **Framework:** [Next.js](https://nextjs.org/) (App Router, TypeScript)
 - **UI & Styling:** [Tailwind CSS](https://tailwindcss.com/)
-- **AI Model:** [Google Gemini API](https://ai.google.dev/) (`gemini-2.5-flash`) via the `@google/genai` SDK
+- **AI Model:** [Google Gemini API](https://ai.google.dev/) (`gemini-3.8-flash`) via the `@google/genai` SDK
 - **Package Manager:** `pnpm`
 
 ---
